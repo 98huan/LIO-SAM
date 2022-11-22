@@ -15,7 +15,8 @@
 #include <visualization_msgs/Marker.h>
 #include <visualization_msgs/MarkerArray.h>
 
-#include <opencv/cv.h>
+// #include <opencv/cv.h>   //ubuntu18.04
+#include <opencv2/imgproc.hpp>  //ubuntu20.04
 
 #include <pcl/point_cloud.h>
 #include <pcl/point_types.h>
