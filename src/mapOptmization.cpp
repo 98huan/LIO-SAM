@@ -41,7 +41,10 @@
 #include <gtsam/inference/Symbol.h>
 
 #include <gtsam/nonlinear/ISAM2.h>
-#include <ros/package.h>
+// #include <ros/package.h>
+#include "file_manager.hpp"
+#include "global_defination/global_defination.h" //工作空间路径全局变量"WORK_SPACE_PATH"头文件
+
 using namespace gtsam;
 
 using symbol_shorthand::B; // Bias  (ax,ay,az,gx,gy,gz)
@@ -1889,6 +1892,8 @@ public:
                 float gps_x = thisGPS.pose.pose.position.x;
                 float gps_y = thisGPS.pose.pose.position.y;
                 float gps_z = thisGPS.pose.pose.position.z;
+                // TODO:gps写入txt
+                
                 if (!useGpsElevation)
                 {
                     gps_z = transformTobeMapped[5];
